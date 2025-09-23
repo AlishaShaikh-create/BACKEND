@@ -1,0 +1,8 @@
+GET:
+-> Used to GET some responses
+-> Data sent in query strings(limited,string data and Visible in URL)
+
+POST:
+-> Used to POST something (for create/Write/Update)
+-> Data sent via request body(any type of data)
+-> when we want to send something in the backend
