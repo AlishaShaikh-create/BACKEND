@@ -1,0 +1,36 @@
+MOONGODB
+
+The Shell 
+
+mongosh --> to start the Shell
+
+use college --> to create & use a new database called 
+
+--> mongodb recognizes the javascript code
+so if we can  perform few basic operations 1+2 and few string operations
+
+-> bydefault moongodb create the temporary database and its name is " test ".
+
+-> the basic database which is already created is 
+->admin 
+-> local 
+-> text
+
+-> The basic hierarchy of the database in the moongodb is  
+  ->database 
+      |-> Collection
+           |-> document [ Each individual data of a person ]
+
+-> to use the database 
+command: use <database name>
+
+use college --> to create & use a new database called "college"
+--> If college databse exist then we will go inside that database or else new database will get created with the name college
+
+--> db command help use to know in which database we are 
+
+//Data Insertion in moongodb
+
+BSON DATA:
+
+Difference between 
