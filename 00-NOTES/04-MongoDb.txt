@@ -1,0 +1,11 @@
+FIND IN DB:
+
+db.collection.find() //return everything
+
+FOR EVERYTHING query:
+                      |-> here we can pass multiple conditions
+db.collection.find({key:value})  --> this thing return the cursor . cursor means reference to original .It return the object only
+
+db.collection.findOne({})--> return the actual document. It return the array of object . And it return only one
+ 
+db.student.find({city:"Delhi",marks:75})
