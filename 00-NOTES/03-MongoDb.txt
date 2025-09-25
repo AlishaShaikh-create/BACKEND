@@ -33,4 +33,84 @@ use college --> to create & use a new database called "college"
 
 BSON DATA:
 
-Difference between 
+Difference between BSON and JSON data
+
+JSON                                 BSON(Binary)
+-> text based format             -> Binary data
+-> Space ineffficient            ->Encoding Binary
+-> less data types
+
+--> mongodb stores the data in the BSON format.
+
+
+COLLECTION:
+
+-> Document: Mongo stores data in form of document (BSON docs)
+
+-> document have key value pair 
+   {
+    name:"alisha"
+     email:"alisha@gmail.com"
+   }
+
+-> Collection : MongoDb stores document in Collection.
+
+->db.collection.inserOne( { }) --> insert the single document into a collection.
+
+Output:
+
+{
+	"acknowledged" : true, --> that means that the moongodb has find
+	"insertedId" : ObjectId  ("68d578fe7630977964d43498")  --> its like the primary key.
+}
+
+To inser many data :
+db.collectionName.insertMany([{},{},{}])
+
+Example:
+  --> 
+  db.employees.insertMany([
+  {empId: 1, name: 'Clark', dept: 'Sales' },
+  {empId: 2, name: 'Dave', dept: 'Accounting' },
+  {empId: 3, name: 'Ava', dept: 'Sales' }
+]);
+
+
+--> db.collection.find()  --> to find the data of the collection
+
+Example:
+
+db.employees.insertMany([
+  {empId: 1, name: 'Clark', dept: 'Sales' },
+  {empId: 2, name: 'Dave', dept: 'Accounting' },
+  {empId: 3, name: 'Ava', dept: 'Sales' }
+]);
+
+db.employees.insertOne({name:"Alisha" ,age:23})
+
+db.employees.find()
+
+
+OUTPUT:
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("68d579fe2e2ad155d1f326cc"),
+		ObjectId("68d579fe2e2ad155d1f326cd"),
+		ObjectId("68d579fe2e2ad155d1f326ce")
+	]
+}
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("68d579fe2e2ad155d1f326cf")
+}
+{ "_id" : ObjectId("68d579fe2e2ad155d1f326cc"), "empId" : 1, "name" : "Clark", "dept" : "Sales" }
+{ "_id" : ObjectId("68d579fe2e2ad155d1f326cd"), "empId" : 2, "name" : "Dave", "dept" : "Accounting" }
+{ "_id" : ObjectId("68d579fe2e2ad155d1f326ce"), "empId" : 3, "name" : "Ava", "dept" : "Sales" }
+
+--> if the collection does not exist then it automatically creates the collection. 
+
+FOR EXAMPLE:
+  db.student.insertOne({ "name" : "Ava", "dept" : "Sales" })
+  
+--> if student collection doesnot exist then it create the new collection called student.
