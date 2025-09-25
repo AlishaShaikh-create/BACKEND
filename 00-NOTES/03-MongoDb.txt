@@ -108,9 +108,11 @@ OUTPUT:
 { "_id" : ObjectId("68d579fe2e2ad155d1f326cd"), "empId" : 2, "name" : "Dave", "dept" : "Accounting" }
 { "_id" : ObjectId("68d579fe2e2ad155d1f326ce"), "empId" : 3, "name" : "Ava", "dept" : "Sales" }
 
+
 --> if the collection does not exist then it automatically creates the collection. 
 
 FOR EXAMPLE:
   db.student.insertOne({ "name" : "Ava", "dept" : "Sales" })
   
 --> if student collection doesnot exist then it create the new collection called student.
+
