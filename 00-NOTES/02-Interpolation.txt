@@ -1,0 +1,8 @@
+INERPOLATION SYNTAX:
+
+Interpolation refer to the embedding expression into marked up text
+
+--> refer ejs.co (website)
+<%= %> -->html string 
+
+--> Passing data to ejs.

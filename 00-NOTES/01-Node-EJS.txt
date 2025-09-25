@@ -1,0 +1,26 @@
+TEMPLATING:
+
+-> Templating in JavaScript refers to the process of generating dynamic HTML or other document structures by combining a predefined template with data.
+
+->Templates: These are essentially blueprints or skeletons of the desired output. They contain static content (like standard HTML tags) and placeholders where dynamic data will be inserted. These placeholders are often denoted by special syntax, such as {{variableName}} or <%propertyName%>
+
+-> Data in templating changes that is data is dynamic but thw way data is represented remains the same.
+
+node EJS :( Embedded JavaScript Templates )
+
+-> EJS is a simple templating language that lets you generate HTML markup with plain JS
+
+-> To install EJS we need npm i ejs 
+
+-> Here we will notice that for everything that we have installed need to imported but ejs we did not import .
+
+-> This is because the express have automatically imported the things
+
+  app.set("view engine","ejs") 
+            |-> here view refer to template 
+
+app.get('/',(req,res)=>{
+    res.send("Hello world");  -->  here we can send the string or json data or what ever but what if i want to completely send the file
+});
+
+-> what ever the template we write it should be views folder.

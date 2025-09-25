@@ -1,0 +1,27 @@
+REST:(REPRESENTATION STATE TRANSFER)
+
+ -> REST is an architectural  style that defines a set of constraints to be used for creating web services.
+ 
+-> It allows two computer systems to communicate securely over the internet or a local network, typically using standard HTTP requests.
+
+->A client sends an HTTP request to a specific URI (endpoint) representing a resource. This request includes an HTTP method (e.g., GET to retrieve data, POST to create new data, PUT to update existing data, DELETE to remove data) and potentially a request body or parameters. The server processes the request, performs the requested operation on the resource, and sends an HTTP response back to the client. This response typically includes a status code indicating the outcome of the operation and a representation of the resource (e.g., in JSON format).
+
+->Restful api is used for performing CRUD operation
+
+->CRUD 
+  C = create
+  R = read
+  U = update
+  D = delete
+
+Resourse :
+
+A resource is any piece of information that can be named and manipulated via the web. Think of it as a noun—something you can point to, retrieve, update, or delete.
+Examples of resources:
+- A user in a system (/users)
+- A blog post (/posts/123)
+- A product in an online store (/products/456)
+- A booking (/bookings/789)
+
+
+ 
