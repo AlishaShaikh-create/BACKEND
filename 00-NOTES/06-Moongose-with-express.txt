@@ -33,7 +33,7 @@ app.listen(port,()=>{
     console.log(`server is running at the port ${port} `);
 })
 
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
 app.get('/ ,(req,res)=>{
 
@@ -49,7 +49,7 @@ app.get () --> is used to get only the response
 
 res.json({msg:"hello"}) --> it is used to send the json data
 
-------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 OPEARTION THAT CAN BE PERFORMED ARE :
 
 GET: Fetch the data from the db
@@ -67,4 +67,27 @@ u can't use put ,delete ,post
    
    this statement only works when we are using the app.js file if you are in other folder and writing the file then this does not works
 
-   
+{FOLDER STRUCTURE}
+
+--> components  { this is for the api}   what ever api is written will be exported 
+      |-> user 
+            |-> index.js 
+
+--> model {this is for the database schema}
+      |-> user
+           |-> user.js    
+
+--> util 
+      |-> dbConnect.js { moongose connection }
+
+app.js   ( here we will import the api from the componets folder )
+
+we use
+  --> app.use('/user', '/getuser')
+
+             
+/user : is prefix 
+/getuser : is suffix               
+
+----------------------------------------------------------------------------------------------------------------
+
