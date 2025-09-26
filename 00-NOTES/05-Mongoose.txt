@@ -1,0 +1,24 @@
+MOONGOSE :
+
+--> A library that creates a connection between MongoDB & Node.js JavaScript Runtime Environment.
+
+--> It is an ODM(Object Data Modeling ) Library.
+
+--> moongose is can be install with the npm package.
+
+--> We are using mongoose so that we can control database with the code 
+
+INSTALLATION OF MOONGOSE:
+npm i moongose  
+
+import mongoose from "mongoose";
+mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+'mongodb://127.0.0.1:27017/test'
+
+mongodb = name of the mongodb 
+127.0.0.1 = localhost address
+27017 = port of the mongodb
+test = default database which is created by mongodb [ here we can change the database name ]
+
+--> database operation are the async function 
