@@ -1,4 +1,5 @@
 import express from 'express'
+import './dbConnect.js'
 
 let port = 5000;
 const app=express()
