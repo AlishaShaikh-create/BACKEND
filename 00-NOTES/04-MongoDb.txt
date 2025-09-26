@@ -49,3 +49,11 @@ db.employees.find({
   dept: "Sales",
   "performance.subject": "English"
 });
+
+DELETE IN DB:
+db.collection.deleteOne(<filter>,<option>)
+
+db.colllection.deleteMany( {} ) --> complete database gets deleted
+
+db.dropDatabase():
+--> The databass that we created wil get deleted .
