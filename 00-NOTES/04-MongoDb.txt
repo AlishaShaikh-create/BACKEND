@@ -43,4 +43,9 @@ db.collection.replaceOne()
 
 db.student.replaceOne( {name:"bob"} , { name:"Alisha" , marks : 97 })
 
+NESTING IN DB:
 
+db.employees.find({
+  dept: "Sales",
+  "performance.subject": "English"
+});
