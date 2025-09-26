@@ -29,3 +29,18 @@ student who scored > 75 or live in Delhi
 
 db.student.find( { $or : [ { marks:{$gt:75}},{city:"Delhi"} ] } )
 
+UPDATE IN DATABASE
+
+db.collection.updateOne() --> Update at most a single document that matches a specified filter even though multiple document may matches the  specified filter.
+
+db.collection.updateOne( <filter> , <update>,<option>)
+
+db.student.updateOne( { name:"Adam"},{$set : { marks : 99 }})
+
+db.collection.updateMany()
+
+db.collection.replaceOne()
+
+db.student.replaceOne( {name:"bob"} , { name:"Alisha" , marks : 97 })
+
+
