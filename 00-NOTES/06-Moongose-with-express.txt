@@ -1,0 +1,70 @@
+EXPRESS:
+STEPS FOR INSTALLATION:
+
+STEP-1: npm init -y [ to initialize the package.json file]
+
+STEP-2: npm i express [ to install the express ]
+
+STEP-3: npm i nodemon [ to install the nodemon ] 
+        nodemon is used for auto restart of the server whenever you change a file in your porject
+
+STEP-4: npm i dotenv 
+
+STEP-4: Open package.json and type
+        "type":"module" --> this indicates the ES6 syntax 
+        
+        -> in script tag type:
+          "start" : "nodemon app.js"
+
+--> Version of the express 
+     "^5.1.0" 
+      ^ --> caret which install the latest Version
+
+-----------------------------------------------------------------------------------------------------------------------
+open a new file called app.js
+
+import express from 'express'
+const app = express();
+const port = 5000;
+app.get('/' ,(req,res)=>{
+     res.send("<h1>HELLO</h1>")
+});
+app.listen(port,()=>{
+    console.log(`server is running at the port ${port} `);
+})
+
+-----------------------------------------------------------------------------------------------
+
+app.get('/ ,(req,res)=>{
+
+})
+
+app.get takes 2 parameter 
+1.router
+2.arrow function 
+
+app.get () --> is used to get only the response
+
+--> at one time we can send only one response
+
+res.json({msg:"hello"}) --> it is used to send the json data
+
+------------------------------------------------------------------------------------
+OPEARTION THAT CAN BE PERFORMED ARE :
+
+GET: Fetch the data from the db
+POST: add  the new data in db
+PUT: Update the existing data from the data
+DLETE: delete the data 
+
+-->So Broweer Only supoort the get api
+u can't use put ,delete ,post 
+
+--> For this reason we use the postman to test our api.
+
+--> import express form 'express'
+     const app = express()
+   
+   this statement only works when we are using the app.js file if you are in other folder and writing the file then this does not works
+
+   
