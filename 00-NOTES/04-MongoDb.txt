@@ -8,4 +8,24 @@ db.collection.find({key:value})  --> this thing return the cursor . cursor means
 
 db.collection.findOne({})--> return the actual document. It return the array of object . And it return only one
  
-db.student.find({city:"Delhi",marks:75})
+db.student.find({city:"Delhi",marks:75});
+
+-> mongo db have may operators 
+$eq -> matches values that are eqaul to a specific value
+
+$gt -> greater than 
+
+$gte-> greater than or equal to
+
+EXAMPLE:
+
+-> db.student.find({marks:{ $gt:75 } } );
+
+-> db.student.find({city:{$in : [ 'delhi':'mumbai']}})
+
+-> mongodb value are case sensative 
+
+student who scored > 75 or live in Delhi
+
+db.student.find( { $or : [ { marks:{$gt:75}},{city:"Delhi"} ] } )
+
